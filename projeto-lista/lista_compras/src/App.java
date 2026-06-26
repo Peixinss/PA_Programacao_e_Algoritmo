@@ -22,7 +22,7 @@ public class App {
 
 
                     1 - Criar uma nova lista de tarefas
-                    3 - Sair
+                    2 - Sair
 
 
                     """);
@@ -60,14 +60,30 @@ public class App {
 
 
                                 }
+                                case 2 -> {
+                                System.out.println("Voce escolheu deletar a lista");
+                                listaTarefas.clear();
+                                System.out.println(listaTarefas);
+                                System.out.println("lista deletada com sucesso");
+                                }
+                                
                                 case 3 ->{
                                     System.out.println("Você escolheu ver a lista");
                                     for(String item : listaTarefas){
                                         System.out.printf("%s \n", item);
                                     }
                                 }
-                                case 4 -> {
+                                case 4 ->{
+                                    System.out.println("Voce escolheu Alterar um item");
+                                    System.out.println();
+                                }
+                                    
+                                case 5 -> {
                                     System.out.println("Você escolheu remover um item:");
+                                    System.out.println("Escolha qual item remover:");
+                                    for(String item : listaTarefas){
+                                        System.out.printf("%s \n", item, "\n");
+                                    }
                                     String itvRemover = inUser.nextLine();
 
                                     boolean removido = listaTarefas.remove(itvRemover);
@@ -83,7 +99,7 @@ public class App {
                                 }
                                 
                            
-                             }while(opcao !=4);                    
+                             }while(opcao !=6);                    
 
 
 
