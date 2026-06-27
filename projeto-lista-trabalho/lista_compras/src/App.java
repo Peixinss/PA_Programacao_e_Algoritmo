@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class App {
     public static void main(String[] args) throws Exception {
        Scanner inUser = new Scanner(System.in);
@@ -47,22 +46,22 @@ public class App {
                             switch (opcao) {
 
                                 case 1 -> {
-                                    System.out.println("Digite o nome do item:");
+                                    System.out.println("Digite o nome do item: ");
                                     String novaTarefa = inUser.nextLine();
                                     lista.add(novaTarefa);
-                                    System.out.println("Item adicionado com sucesso!");
+                                    System.out.println("Item adicionado");
                                 }
 
                                 case 2 -> {
                                     lista.clear();
-                                    System.out.println("Lista deletada com sucesso!");
+                                    System.out.println("Lista deletada");
                                 }
 
                                 case 3 -> {
                                     if (lista.isEmpty()) {
-                                        System.out.println("A lista está vazia.");
+                                        System.out.println("A lista está vazia");
                                     } else {
-                                        System.out.println("Lista de tarefas:");
+                                        System.out.println("Lista de tarefas: ");
                                         for (int i = 0; i < lista.size(); i++) {
                                             System.out.printf("%d - %s%n", i, lista.get(i));
                                         }
@@ -71,51 +70,51 @@ public class App {
 
                                 case 4 -> {
                                     if (lista.isEmpty()) {
-                                        System.out.println("A lista está vazia.");
+                                        System.out.println("A lista está vazia");
                                     } else {
 
                                         for (int i = 0; i < lista.size(); i++) {
                                             System.out.printf("%d - %s%n", i, lista.get(i));
                                         }
 
-                                        System.out.println("Digite o número do item que deseja alterar:");
+                                        System.out.println("Digite o número do item que deseja alterar: ");
                                         int posicaoAlterar = inUser.nextInt();
                                         inUser.nextLine();
 
                                         if (posicaoAlterar >= 0 && posicaoAlterar < lista.size()) {
-                                            System.out.println("Digite o novo item:");
+                                            System.out.println("Digite o novo item: ");
                                             String novoProduto = inUser.nextLine();
                                             lista.set(posicaoAlterar, novoProduto);
-                                            System.out.println("Item alterado com sucesso!");
+                                            System.out.println("Item alterado com sucesso");
                                         } else {
-                                            System.out.println("Posição inválida.");
+                                            System.out.println("Posição inválida");
                                         }
                                     }
                                 }
 
                                 case 5 -> {
                                     if (lista.isEmpty()) {
-                                        System.out.println("A lista está vazia.");
+                                        System.out.println("A lista está vazia");
                                     } else {
 
                                         for (int i = 0; i < lista.size(); i++) {
                                             System.out.printf("%d - %s%n", i, lista.get(i));
                                         }
 
-                                        System.out.println("Digite o número do item que deseja remover:");
+                                        System.out.println("Digite o número do item que deseja remover: ");
                                         int posicaoRemover = inUser.nextInt();
                                         inUser.nextLine();
 
                                         if (posicaoRemover >= 0 && posicaoRemover < lista.size()) {
                                             lista.remove(posicaoRemover);
-                                            System.out.println("Item removido com sucesso!");
+                                            System.out.println("Item removido");
                                         } else {
-                                            System.out.println("Posição inválida.");
+                                            System.out.println("Posição inválida");
                                         }
                                     }
                                 }
 
-                                case 6 -> System.out.println("Saindo da lista...");
+                                case 6 -> System.out.println("Saindo da lista");
 
                                 default -> System.out.println("Opção inválida.");
                             }
